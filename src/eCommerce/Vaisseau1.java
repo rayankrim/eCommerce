@@ -3,7 +3,6 @@ package eCommerce;
 public class Vaisseau1 extends Vaisseau{
 	
 	public Vaisseau1() {
-		super(200, 0);
+		super(200);
 	}
-
 }
