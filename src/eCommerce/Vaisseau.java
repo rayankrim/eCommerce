@@ -5,6 +5,14 @@ public abstract class Vaisseau {
 	protected double capaciteMax;
 	protected double stockage;
 	protected Produit produit;
+	protected int noSerie;
+	private static int noSerieCompteur=0;
+
+	Vaisseau(double capaciteMax){
+		this.capaciteMax=capaciteMax;
+		stockage=0;
+		noSerie=noSerieCompteur++;
+	}
 	
 
 	public void charger(Produit Produit) {
