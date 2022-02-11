@@ -1,10 +1,7 @@
 package eCommerce;
-import eCommerce.Vaisseau;
 import eCommerce.EcrasementVaisseauException;
 
 public class Port {
-    boolean occupe=false;
-    int VaisseauArrive=0;
     private Vaisseau vaisseau;
     private int noPort;
 
