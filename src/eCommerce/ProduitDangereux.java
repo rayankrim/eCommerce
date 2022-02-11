@@ -2,7 +2,7 @@ package eCommerce;
 
 public class ProduitDangereux extends Produit{
 
-    public ProduitDangereux(String nom, double poids) {
+    public ProduitDangereux() {
         super("produit dangereux", 30);
     }
 }
