@@ -12,6 +12,7 @@ public abstract class Produit {
     }
 
     public double getPoids() {
+
         return poids;
     }
 
