@@ -31,7 +31,7 @@ public abstract class Vaisseau {
 	}
 
 
-	public void charger(Produit produit) throws ChargementException {
+	public void charger(Produit produit, Port port) throws ChargementException {
 
 		// On verifie qu'il y a de la place pour le produit qu'on veut charger
 		for (Produit produitRegle : this.produitsRegle) {
@@ -53,12 +53,12 @@ public abstract class Vaisseau {
 	}
 
 
-	public void decharger(Produit produit) throws DechargementException {
+	public void decharger(Produit produit, Port port) throws DechargementException {
 		// On retire le produit
 		
 		double balance = this.getStockageActuel(produit) - produit.getPoids();
 		if( balance >= 0 ) {
-		updateStockageActuel(produit, false);
+		updateStockageActuel(produit, false, port);
 		System.out.println("on decharge le bail");
 		}
 		

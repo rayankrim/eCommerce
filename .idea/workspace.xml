@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aecf390-4b5b-4908-804a-6f23b7eba5e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Planete1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Planete1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Planete2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Planete2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Planete3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Planete3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Planete4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Planete4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Planete5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Planete5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,7 @@
       <workItem from="1644872452788" duration="1000" />
       <workItem from="1644872472426" duration="1208000" />
       <workItem from="1645239689642" duration="3166000" />
-      <workItem from="1645242911971" duration="24280000" />
+      <workItem from="1645242911971" duration="24468000" />
     </task>
     <servers />
   </component>
