@@ -1,12 +1,11 @@
 package eCommerce;
-import eCommerce.Vaisseau;
-import eCommerce.EcrasementVaisseauException;
+
 
 import java.util.Vector;
 
 public class Port {
-    boolean occupe=false;
-    protected int VaisseauArrive=0;
+	
+    private int VaisseauArrive=0;
     private Vaisseau vaisseau;
     private int noPort;
     private int cycle;
@@ -16,6 +15,7 @@ public class Port {
         vaisseau=null;
         this.noPort = noPort;
     }
+
 
     private boolean vaisseauSurPort(){
         return vaisseau != null;

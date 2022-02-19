@@ -1,5 +1,6 @@
 package eCommerce;
 
+import eCommerce.EcrasementVaisseauException;
 
 public interface EspaceCommercial {
 
@@ -10,5 +11,6 @@ public interface EspaceCommercial {
 
     public void faireAtterrirVaisseau(int noSerie, int noPiste)
             throws EcrasementVaisseauException;
+
 
 }

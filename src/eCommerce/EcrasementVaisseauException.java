@@ -1,16 +1,15 @@
 package eCommerce;
 
 public class EcrasementVaisseauException extends Exception {
-    Vaisseau vaisseauEcrase;
+
+    Vaisseau vaisseauEcrasee;
 
     EcrasementVaisseauException(Vaisseau vaisseau){
-        vaisseauEcrase = vaisseau;
+        vaisseauEcrasee = vaisseau;
     }
 
-    @Override
     public String getMessage() {
-        return "Le vaisseau " + vaisseauEcrase + " s'est ecrase!";
+        return "Le vaisseau " + vaisseauEcrasee + " s'est ecrasee!";
     }
-
-
 }
+
