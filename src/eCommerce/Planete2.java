@@ -3,7 +3,7 @@ package eCommerce;
 public class Planete2 extends Planete {
 	
 	Planete2(int id, int totalports) {
-		super(id, totalports,new Produit[]{new ProduitRegulier(10),new ProduitDangereux(10)});
+		super(id, totalports,new Produit[]{new ProduitRegulier(20),new ProduitDangereux(20)});
 		// TODO Auto-generated constructor stub
 	}
 	int id=2;
