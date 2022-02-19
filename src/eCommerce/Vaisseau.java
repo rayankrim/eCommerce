@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+
 public abstract class Vaisseau {
 
 	private int noSerie;
@@ -28,7 +30,9 @@ public abstract class Vaisseau {
 		this.niveauEssence = niveauEssence;
 	}
 
-	public void charger(Produit produit, Port port) {
+
+	public void charger(Produit produit) throws ChargementException {
+
 		// On verifie qu'il y a de la place pour le produit qu'on veut charger
 		for (Produit produitRegle : this.produitsRegle) {
 			if (produitRegle.getClass().equals(produit.getClass())) {
@@ -41,13 +45,27 @@ public abstract class Vaisseau {
 				}
 				return;
 			}
+			else {
+				throw new ChargementException(produit);
+				
+			}
 		}
 	}
 
-	public void decharger(Produit produit, Port port) {
+
+	public void decharger(Produit produit) throws DechargementException {
 		// On retire le produit
-		updateStockageActuel(produit, false, port);
+		
+		double balance = this.getStockageActuel(produit) - produit.getPoids();
+		if( balance >= 0 ) {
+		updateStockageActuel(produit, false);
 		System.out.println("on decharge le bail");
+		}
+		
+		else {
+			throw new DechargementException(produit);
+		}
+			
 	}
 
 	public void survol() throws EcrasementVaisseauException{
