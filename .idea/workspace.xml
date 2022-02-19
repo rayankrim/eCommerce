@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aecf390-4b5b-4908-804a-6f23b7eba5e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controleur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eCommerce/Arrivee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eCommerce/Itineraire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/EcrasementVaisseauException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/EcrasementVaisseauException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/Espace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Espace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/EspaceCommercial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/EspaceCommercial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/Port.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Port.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eCommerce/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Produit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eCommerce/ProduitDangereux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/ProduitDangereux.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eCommerce/ProduitRegulier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/ProduitRegulier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/Vaisseau1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Vaisseau1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/Vaisseau2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Vaisseau2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/Vaisseau3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Vaisseau3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +28,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,12 +55,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../quizz" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Controleur" />
+      <module name="eCommerce" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -55,7 +86,15 @@
       <workItem from="1644463913453" duration="614000" />
       <workItem from="1644536569529" duration="4350000" />
       <workItem from="1644536569529" duration="1555000" />
-      <workItem from="1644543546461" duration="2283000" />
+      <workItem from="1644543546461" duration="3782000" />
+      <workItem from="1644548941712" duration="34000" />
+      <workItem from="1644548993040" duration="2203000" />
+      <workItem from="1644620316501" duration="1367000" />
+      <workItem from="1644796642674" duration="622000" />
+      <workItem from="1644872452788" duration="1000" />
+      <workItem from="1644872472426" duration="1208000" />
+      <workItem from="1645239689642" duration="3166000" />
+      <workItem from="1645242911971" duration="10115000" />
     </task>
     <servers />
   </component>

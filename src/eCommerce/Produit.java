@@ -19,6 +19,7 @@ public abstract class Produit {
         return poids;
     }
 
-
-
+    public void setPoids(double poids) {
+        this.poids = poids;
+    }
 }

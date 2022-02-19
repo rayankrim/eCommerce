@@ -2,7 +2,7 @@ package eCommerce;
 
 public class ProduitDangereux extends Produit{
 
-    public ProduitDangereux() {
-        super("produit dangereux", 30);
+    public ProduitDangereux(double poids) {
+        super("produit dangereux", poids);
     }
 }
