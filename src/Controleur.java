@@ -38,6 +38,10 @@ public class Controleur {
                         int noPort = lectureClavier.nextInt();
                         espaceCommercial.faireAtterrirVaisseau(noSerie, noPort);
                         break;
+                    case 3 :
+                        System.out.println("Entrer le noSerie du vaisseau : ");
+                        int numSerie = lectureClavier.nextInt();
+                        espaceCommercial.afficherBilanTransactionVaisseau(numSerie);
                 }
             }
         }
@@ -62,6 +66,7 @@ public class Controleur {
         sb.append("1) Faire survoler les vaisseaux\n");
         sb.append("2) Faire atterrir un vaisseau\n");
         sb.append("0) Fin de la journee de travail!\n");
+        sb.append("3) Voir l'historique d'un vaisseau\n");
         sb.append("---------\n");
         sb.append("Votre choix?");
 

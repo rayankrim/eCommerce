@@ -9,6 +9,8 @@ public interface EspaceCommercial {
     public void decharger(int noSerie, int noPlanete);
     public void passerTour() throws EcrasementVaisseauException;
 
+    public void afficherBilanTransactionVaisseau(int noSerie);
+
     public void faireAtterrirVaisseau(int noSerie, int noPiste)
             throws EcrasementVaisseauException;
 

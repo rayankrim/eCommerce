@@ -1,16 +1,20 @@
 package eCommerce;
 
+import java.util.ArrayList;
+
 public abstract class Planete {
-	
-	protected int produits_achetes;
-	protected Port ports;
-	protected int id;
-	protected int totalports;
+
+	//private int produits_achetes;
+	private Port ports;
+	private int id;
+	private int totalports;
+	private  Produit[] produits;
 
 	
 	
-	Planete(int id, int totalports)
+	Planete(int id, int totalports, Produit[] produits)
 	{
+		this.produits = produits;
         this.id = id;
         this.totalports=totalports;
     }

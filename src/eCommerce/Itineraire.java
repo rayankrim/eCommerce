@@ -71,6 +71,12 @@ public class Itineraire implements EspaceCommercial, Arrivee{
         passerTour();
     }
 
+    @Override
+    public void afficherBilanTransactionVaisseau(int noSerie){
+        Vaisseau vaisseau = this.localiserVaisseau(noSerie);
+        vaisseau.afficherBilanTransaction();
+    }
+
     private void faireAvancerVaisseauxSurLesPorts(){
         for (Enumeration<Port> enumPort = ports.elements(); enumPort.hasMoreElements();)
             enumPort.nextElement().avancerVaisseau();

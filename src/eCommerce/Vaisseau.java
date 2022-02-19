@@ -1,15 +1,25 @@
 package eCommerce;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 public abstract class Vaisseau {
 
-	protected int noSerie;
-	protected double niveauEssence;
-	protected final Produit[] produitsRegle;
-	protected ArrayList<Produit> produits = new ArrayList<>();
+	private int noSerie;
+	private double niveauEssence;
+	private final Produit[] produitsRegle;
+	private ArrayList<Produit> produits = new ArrayList<>();
+
+	//transaction
+	Map<Port, List<Produit>> mapTransaction =
+			new HashMap<Port, List<Produit>>();
+
+
+
 
 
 	private static int noSerieCompteur = 0;
@@ -20,7 +30,9 @@ public abstract class Vaisseau {
 		this.niveauEssence = niveauEssence;
 	}
 
+
 	public void charger(Produit produit) throws ChargementException {
+
 		// On verifie qu'il y a de la place pour le produit qu'on veut charger
 		for (Produit produitRegle : this.produitsRegle) {
 			if (produitRegle.getClass().equals(produit.getClass())) {
@@ -28,7 +40,7 @@ public abstract class Vaisseau {
 						produit.getPoids();
 				// Condition pour charger un nouveau produit
 				if (balance >= 0) {
-					updateStockageActuel(produit, true);
+					updateStockageActuel(produit, true, port);
 					System.out.println("on charge le machin");
 				}
 				return;
@@ -39,6 +51,7 @@ public abstract class Vaisseau {
 			}
 		}
 	}
+
 
 	public void decharger(Produit produit) throws DechargementException {
 		// On retire le produit
@@ -80,23 +93,52 @@ public abstract class Vaisseau {
 		return 0;
 	}
 
-	private void updateStockageActuel(Produit produit, boolean charger) {
+	private void updateStockageActuel(Produit produit, boolean charger, Port port) {
 		if (charger) {
-			if (produits.size() == 0) {
-				produits.add(produit);
-			} else {
-				for (int i = 0; i < produits.size(); i++) {
-					if (produits.get(i).getClass().equals(produit.getClass())) {
-						this.produits.get(i).setPoids(this.produits.get(i).getPoids() + produit.getPoids());
-					}
-				}
+			this.addStockageActuel(produit, port);
+		} else {
+			this.removeStockageActuel(produit, port);
+		}
+	}
+
+	private void addStockageActuel(Produit produit, Port port){
+		if (produits.size() == 0) {
+			produits.add(produit);
+			try {
+				mapTransaction.get(port).add(produit);
+			} catch (NullPointerException e) {
+				mapTransaction.put(port, new ArrayList<>());
+				mapTransaction.get(port).add(produit);
 			}
 		} else {
 			for (int i = 0; i < produits.size(); i++) {
 				if (produits.get(i).getClass().equals(produit.getClass())) {
-					this.produits.get(i).setPoids(this.produits.get(i).getPoids() - produit.getPoids());
+					this.produits.get(i).setPoids(this.produits.get(i).getPoids() + produit.getPoids());
 				}
 			}
+		}
+	}
+
+	private void removeStockageActuel(Produit produit, Port port){
+		for (int i = 0; i < produits.size(); i++) {
+			if (produits.get(i).getClass().equals(produit.getClass())) {
+				//regle metier a ajouter : on peut pas enlever + que ce quon a
+				this.produits.get(i).setPoids(this.produits.get(i).getPoids() - produit.getPoids());
+				Produit produitPoidsNegatif = produit;
+				produitPoidsNegatif.setPoids(- produitPoidsNegatif.getPoids());
+				mapTransaction.get(port).add(produitPoidsNegatif);
+			}
+		}
+	}
+
+	public void afficherBilanTransaction() {
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("--- bilan des transactions --- \n");
+		for (Map.Entry mapentry : mapTransaction.entrySet()) {
+			sb.append("clé: " + mapentry.getKey()
+					+ " | valeur: " + mapentry.getValue());
+
 		}
 	}
 
