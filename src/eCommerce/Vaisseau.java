@@ -5,12 +5,20 @@ public abstract class Vaisseau {
 	protected double capaciteMax;
 	protected double stockage;
 	protected Produit produit;
-	protected int produitscharges=0;
-	protected int produitsdecharges=0;
+	private int produitscharges=0;
+	private int produitsdecharges=0;
+	protected int noSerie;
+	private static int noSerieCompteur=0;
 
-	public void charger(Produit Produit) {
-		
-		
+	Vaisseau(int capaciteMax)
+	{
+		this.capaciteMax=capaciteMax;
+		stockage=0;
+		noSerie=noSerieCompteur++;
+	}
+	
+	public void charger(Produit Produit) 
+	{	
 		//On verifie qu'il y a de la place pour le produit qu'on veut charger
 		double balance = capaciteMax - stockage + this.produit.getPoids();
 		
@@ -22,8 +30,20 @@ public abstract class Vaisseau {
 			System.out.println("on charge le machin");		
 		}
 		
+	 }
+	
+	public int getProduitscharges() 
+	{
+		return produitscharges;
 	}
-	public void decharger(Produit Produit){
+	
+	public int getProduitsdecharges() 
+	{
+		return produitsdecharges;
+	}
+	
+	public void decharger(Produit Produit)
+		{
 		//On retire le produit
 		stockage -= this.produit.getPoids();
 		produitsdecharges--;

@@ -1,10 +1,9 @@
 package eCommerce;
-import eCommerce.Vaisseau;
-import eCommerce.EcrasementVaisseauException;
+
 
 public class Port {
-    boolean occupe=false;
-    protected int VaisseauArrive=0;
+	
+    private int VaisseauArrive=0;
     private Vaisseau vaisseau;
     private int noPort;
 
@@ -13,9 +12,26 @@ public class Port {
         vaisseau=null;
         this.noPort = noPort;
     }
+    
+    public void atterrirVaisseau(Vaisseau vaisseauEnApproche) throws EcrasementVaisseauException{
+
+        if (vaisseau != null)
+            throw new EcrasementVaisseauException(vaisseauEnApproche);
+        vaisseau = vaisseauEnApproche;
+        VaisseauArrive=0;
+    }
+
+    public void avancerVaisseau(){
+
+        if (vaisseau != null)
+            if (VaisseauArrive++ == 1){
+                vaisseau = null;          
+                VaisseauArrive = 0;
+            }
+    }
 
     private boolean vaisseauSurPort(){
-    	VaisseauArrive++;
+    	
         return vaisseau != null;
     }
 
