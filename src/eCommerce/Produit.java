@@ -2,9 +2,9 @@ package eCommerce;
 
 public abstract class Produit {
 
-    protected String nom;
-    protected double poids;
-    protected int noSerie;
+    private String nom;
+    private double poids;
+    private int noSerie;
 
     private static int noSerieCompteur = 0;
 
