@@ -101,6 +101,7 @@ public abstract class Vaisseau {
 		}
 	}
 
+
 	private void addStockageActuel(Produit produit, Port port){
 		if (produits.size() == 0) {
 			produits.add(produit);
