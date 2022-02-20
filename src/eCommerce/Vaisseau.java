@@ -53,10 +53,11 @@ public abstract class Vaisseau {
 	}
 
 
-	public void decharger(Produit produit, Port port) throws DechargementException {
+	public void decharger(Produit produit, Port port, Planete planete) throws DechargementException {
 		// On retire le produit
 		
 		double balance = this.getStockageActuel(produit) - produit.getPoids();
+		double balancePlanete = this.getStockageActuel(planete) - produit.getPoids();
 		if( balance >= 0 ) {
 		updateStockageActuel(produit, false, port);
 		System.out.println("on decharge le bail");
