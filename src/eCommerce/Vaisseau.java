@@ -10,10 +10,9 @@ import java.util.Map;
 public abstract class Vaisseau {
 
 	private int noSerie;
-	private double niveauEssence;
+	private int fileAttente;
 	private final Produit[] produitsRegle;
 	private ArrayList<Produit> produits = new ArrayList<>();
-
 	//transaction
 	Map<Port, List<Produit>> mapTransaction =
 			new HashMap<Port, List<Produit>>();
@@ -27,7 +26,7 @@ public abstract class Vaisseau {
 	Vaisseau(double niveauEssence, Produit[] produitsRegle) {
 		this.produitsRegle = produitsRegle;
 		this.noSerie = noSerieCompteur++;
-		this.niveauEssence = niveauEssence;
+		this.fileAttente = fileAttente;
 	}
 
 
@@ -42,6 +41,8 @@ public abstract class Vaisseau {
 				if (balance >= 0) {
 					updateStockageActuel(produit, true, port);
 					System.out.println("on charge le machin");
+				}else{
+					throw new ChargementException(produit);
 				}
 				return;
 			}
@@ -69,15 +70,16 @@ public abstract class Vaisseau {
 	}
 
 	public void survol() throws EcrasementVaisseauException{
-		if (verifierEssence())
-			niveauEssence--;
+		if (verifierFile())
+			fileAttente--;
 		else
 			throw new EcrasementVaisseauException(this);
 	}
 
-	private boolean verifierEssence(){
 
-		return niveauEssence > 0;
+	private boolean verifierFile(){
+
+		return fileAttente < 2;
 	}
 
 	public int getNoSerie() {
@@ -97,6 +99,7 @@ public abstract class Vaisseau {
 		if (charger) {
 			this.addStockageActuel(produit, port);
 		} else {
+
 			this.removeStockageActuel(produit, port);
 		}
 	}
@@ -145,7 +148,14 @@ public abstract class Vaisseau {
 
 	@Override
 	public String toString() {
-		return "(NS:" + noSerie + ", ESS:" + niveauEssence + ") " ;
+		if(fileAttente == 0){
+
+			return "(NS:" + noSerie+ ")" ;
+		}else {
+			return "(NS:" + noSerie + ", en file d'attente)";
+
+		}
+
 	}
 }
 

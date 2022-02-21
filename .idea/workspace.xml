@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aecf390-4b5b-4908-804a-6f23b7eba5e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Planete5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Produit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Produit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Vaisseau.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Vaisseau.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eCommerce/Planete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Planete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Produit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ecommerceClone" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -91,7 +82,7 @@
       <workItem from="1644872472426" duration="1208000" />
       <workItem from="1645239689642" duration="3166000" />
       <workItem from="1645242911971" duration="30009000" />
-      <workItem from="1645394310662" duration="559000" />
+      <workItem from="1645394310662" duration="7313000" />
     </task>
     <servers />
   </component>
