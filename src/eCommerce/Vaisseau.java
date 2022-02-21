@@ -49,7 +49,7 @@ public abstract class Vaisseau {
 			}
 			else {
 				throw new ChargementException(produit);
-				
+
 			}
 		}
 	}
@@ -57,18 +57,17 @@ public abstract class Vaisseau {
 
 	public void decharger(Produit produit, Port port, Planete planete) throws DechargementException {
 		// On retire le produit
-		
+
 		double balance = this.getStockageActuel(produit) - produit.getPoids();
-		double balancePlanete = this.getStockageActuel(planete) - produit.getPoids();
 		if( balance >= 0 ) {
 		updateStockageActuel(produit, false, port);
 		System.out.println("on decharge le bail");
 		}
-		
+
 		else {
 			throw new DechargementException(produit);
 		}
-			
+
 	}
 
 	public void enAttente() throws EcrasementVaisseauException{
@@ -103,6 +102,7 @@ public abstract class Vaisseau {
 			this.removeStockageActuel(produit, port);
 		}
 	}
+
 
 	private void addStockageActuel(Produit produit, Port port){
 		if (produits.size() == 0) {

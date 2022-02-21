@@ -8,7 +8,6 @@ import java.util.Map;
 
 public abstract class Planete {
 
-	//private int produits_achetes;
 	private Port ports;
 	private int id;
 	private int totalports;
@@ -45,6 +44,12 @@ public abstract class Planete {
 	public String toString() 
 	{
 		return "Planete []";
+	}
+
+
+	public void afficherBilanTransaction(){
+
+
 	}
 
 }

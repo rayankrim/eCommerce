@@ -23,10 +23,12 @@ public abstract class Produit {
         this.poids = poids;
     }
 
+
 	public String getNom() {
 		return nom;
 	}
     
     
     
+
 }
