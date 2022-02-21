@@ -1,15 +1,23 @@
 package eCommerce;
 
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Vector;
+
+
+
 
 public class Itineraire implements EspaceCommercial, Arrivee{
 
     private Vector<Vaisseau> vaisseauEnSurvol;
     private Vector<Port> ports;
-
+    private Chemin chemin;
+    private int i;
+    private Planete position;
+    private Vaisseau vaisseau;
+    
     public Itineraire(){
-
+    	i=0;
         vaisseauEnSurvol = new Vector<Vaisseau>();
         ports = new Vector<Port>();
         ports.add(new Port(0));
@@ -27,9 +35,10 @@ public class Itineraire implements EspaceCommercial, Arrivee{
     public String afficherItineraire(){
 
         StringBuilder sb = new StringBuilder();
-
+ 
         sb.append("--- start --- \n");
         sb.append("Vaisseaux en survol\n");
+        System.out.println(vaisseauEnSurvol.elements());
         for (Enumeration<Vaisseau> enumVaisseau= vaisseauEnSurvol.elements(); enumVaisseau.hasMoreElements();)
             sb.append(enumVaisseau.nextElement() + "\n");
 
@@ -42,14 +51,35 @@ public class Itineraire implements EspaceCommercial, Arrivee{
         return sb.toString();
     }
 
+    //A checker
     public void passerTour() throws EcrasementVaisseauException{
 
         faireSurvolerLesVaisseaux();
         faireAvancerVaisseauxSurLesPorts();
     }
+    
+
+    public void avancer() {
+        List<Planete> planetes = chemin.getChemin();
+        if (i < (planetes.size() - 1)) {
+            i++;
+            setPosition(planetes.get(i));
+
+            if (i == planetes.size() - 1) {
+                vaisseau.setCheminFinal(true);
+            }
+
+        }
+    }
 
 
-    @Override
+    private void setPosition(Planete planete) {
+		// TODO Auto-generated method stub
+    	this.position = planete; 
+    	}
+
+
+	@Override
     public void charger(int noSerie, int noPlanete) {
 
     }

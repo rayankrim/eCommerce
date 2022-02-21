@@ -5,12 +5,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.ecommerce.model.Route;
+
+import aeroport.EcrasementAvionException;
+
 
 
 public abstract class Vaisseau {
 
 	private int noSerie;
-	private double niveauEssence;
+	private int fileAttente;
+	private Chemin chemin;
+	private boolean cheminFinal;
 	private final Produit[] produitsRegle;
 	private ArrayList<Produit> produits = new ArrayList<>();
 
@@ -18,16 +24,12 @@ public abstract class Vaisseau {
 	Map<Port, List<Produit>> mapTransaction =
 			new HashMap<Port, List<Produit>>();
 
-
-
-
-
+	
 	private static int noSerieCompteur = 0;
 
 	Vaisseau(double niveauEssence, Produit[] produitsRegle) {
 		this.produitsRegle = produitsRegle;
 		this.noSerie = noSerieCompteur++;
-		this.niveauEssence = niveauEssence;
 	}
 
 
@@ -69,16 +71,16 @@ public abstract class Vaisseau {
 			
 	}
 
-	public void survol() throws EcrasementVaisseauException{
-		if (verifierEssence())
-			niveauEssence--;
+	public void enAttente() throws EcrasementVaisseauException{
+		if (verifierFile())
+			fileAttente++;
 		else
 			throw new EcrasementVaisseauException(this);
 	}
 
-	private boolean verifierEssence(){
+	private boolean verifierFile(){
 
-		return niveauEssence > 0;
+		return fileAttente < 2;
 	}
 
 	public int getNoSerie() {
@@ -145,9 +147,34 @@ public abstract class Vaisseau {
 
 	@Override
 	public String toString() {
-		return "(NS:" + noSerie + ", ESS:" + niveauEssence + ") " ;
+		return "(NS:" + noSerie + ") " ;
 	}
-}
 
 
+	public void survol(){
+	}
+	
+	public Chemin getChemin() { 
+		return chemin; 
+	}
 
+	private void setChemin(Chemin chemin) { 
+		this.chemin = chemin; 
+		}
+
+
+	public boolean getCheminFinal(){
+		return cheminFinal; 
+		}
+
+
+	public void setCheminFinal(boolean cf) {
+		// TODO Auto-generated method stub
+		cheminFinal = cf; 
+		
+	}
+	
+	}
+
+
+	
