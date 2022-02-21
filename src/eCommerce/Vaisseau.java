@@ -6,21 +6,20 @@ import java.util.List;
 import java.util.Map;
 
 
-
 public abstract class Vaisseau {
 
 	private int noSerie;
 	private int fileAttente;
+
+	private Chemin chemin;
+	private boolean cheminFinal;
 	private final Produit[] produitsRegle;
 	private ArrayList<Produit> produits = new ArrayList<>();
 	//transaction
 	Map<Port, List<Produit>> mapTransaction =
 			new HashMap<Port, List<Produit>>();
 
-
-
-
-
+	
 	private static int noSerieCompteur = 0;
 
 	Vaisseau(double niveauEssence, Produit[] produitsRegle) {
@@ -71,7 +70,7 @@ public abstract class Vaisseau {
 
 	public void survol() throws EcrasementVaisseauException{
 		if (verifierFile())
-			fileAttente--;
+			fileAttente++;
 		else
 			throw new EcrasementVaisseauException(this);
 	}
@@ -155,9 +154,30 @@ public abstract class Vaisseau {
 			return "(NS:" + noSerie + ", en file d'attente)";
 
 		}
-
 	}
-}
+
+	
+	public Chemin getChemin() { 
+		return chemin; 
+	}
+
+	private void setChemin(Chemin chemin) { 
+		this.chemin = chemin; 
+		}
 
 
+	public boolean getCheminFinal(){
+		return cheminFinal; 
+		}
 
+
+	public void setCheminFinal(boolean cf) {
+		// TODO Auto-generated method stub
+		cheminFinal = cf; 
+		
+	}
+	
+	}
+
+
+	

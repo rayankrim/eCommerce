@@ -17,15 +17,28 @@ public abstract class Planete {
 	Map<Port, List<Produit>> mapTransaction =
 			new HashMap<Port, List<Produit>>();
 
-	
-	
-	Planete(int id, int totalports, Produit[] produitsRegle)
-	{
-		this.produitsRegle = produitsRegle;
-        this.id = id;
-        this.totalports=totalports;
-    }
 
+
+	Planete(int id, int totalports,  Map<Produit, Integer> capacitemMax, Map<Produit, Integer> ressources,Produit[] produitsRegle)
+	{
+		this.produits = produits;
+		this.id = id;
+		this.totalports=totalports;
+		this.produitsRegle=produitsRegle;
+	}
+
+
+
+	public void afficherBilanTransaction() {
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("--- bilan des transactions --- \n");
+		for (Map.Entry mapentry : mapTransaction.entrySet()) {
+			sb.append("clé: " + mapentry.getKey()
+					+ " | valeur: " + mapentry.getValue());
+
+		}
+	}
 
 	
 	@Override
@@ -34,11 +47,6 @@ public abstract class Planete {
 		return "Planete []";
 	}
 
-
-	public void afficherBilanTransaction(){
-
-
-	}
 
 	public void charger(Produit produit, Port port) throws ChargementException {
 
