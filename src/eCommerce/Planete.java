@@ -8,6 +8,7 @@ import java.util.Map;
 public abstract class Planete {
 
 	private Port ports;
+	private String nom ;
 	private int id;
 	private int totalports;
 	private Produit produit;
@@ -19,12 +20,13 @@ public abstract class Planete {
 
 
 
-	Planete(int id, int totalports,  Map<Produit, Integer> capacitemMax, Map<Produit, Integer> ressources,Produit[] produitsRegle)
+	Planete(int id, int totalports,Produit[] produitsRegle, String nom)
 	{
 		this.produits = produits;
 		this.id = id;
 		this.totalports=totalports;
 		this.produitsRegle=produitsRegle;
+		this.nom = nom;
 	}
 
 
@@ -137,9 +139,13 @@ public abstract class Planete {
 
 	}
 
+	public String getNom() {
+		return nom;
+	}
 
-
-
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 }
 
 
