@@ -22,4 +22,8 @@ public abstract class Produit {
     public void setPoids(double poids) {
         this.poids = poids;
     }
+
+    public String getNom() {
+        return nom;
+    }
 }
