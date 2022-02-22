@@ -30,9 +30,6 @@ public class Controleur {
         System.out.println("Combien de cycle voulez-vous jouer ?");
         int cycle = new Scanner(System.in).nextInt();
 
-        Cycle cycleDeBase = new Cycle();
-        int nbCycle = cycleDeBase.getNbCycle(cycle);
-
         if(cycle<1){
             System.out.println("Ok tu joues pas");
         }
