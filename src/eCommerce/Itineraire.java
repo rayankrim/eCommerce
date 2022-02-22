@@ -109,7 +109,7 @@ public class Itineraire implements EspaceCommercial, Arrivee{
 
     private void faireAvancerVaisseauxSurLesPorts(){
         for (Enumeration<Port> enumPort = ports.elements(); enumPort.hasMoreElements();)
-            enumPort.nextElement().avancerVaisseau();
+            enumPort.nextElement().atterissage();
     }
 
     private void faireSurvolerLesVaisseaux() throws EcrasementVaisseauException{

@@ -22,10 +22,9 @@ public abstract class Vaisseau {
 	
 	private static int noSerieCompteur = 0;
 
-	Vaisseau(double niveauEssence, Produit[] produitsRegle) {
+	Vaisseau(Produit[] produitsRegle) {
 		this.produitsRegle = produitsRegle;
 		this.noSerie = noSerieCompteur++;
-		this.fileAttente = fileAttente;
 	}
 
 
@@ -68,16 +67,16 @@ public abstract class Vaisseau {
 
 	}
 
-	public void survol() throws EcrasementVaisseauException{
+	public void survol(){
+	}
+
+	public void atterissage() throws EcrasementVaisseauException{
 		if (verifierFile())
 			fileAttente++;
 		else
 			throw new EcrasementVaisseauException(this);
 	}
-
-
 	private boolean verifierFile(){
-
 		return fileAttente < 2;
 	}
 
