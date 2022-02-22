@@ -16,6 +16,10 @@ public class Port {
         this.noPort = noPort;
     }
 
+    public int recupererCycle(int cycleDebut){
+        return cycleDeBase=cycleDeBase;
+    }
+
 
     private boolean vaisseauSurPort(){
         return vaisseau != null;
@@ -24,7 +28,7 @@ public class Port {
     @Override
     public String toString() {
         if (vaisseauSurPort())
-            return "(" + noPort + ") Occupe par:" + vaisseau;
+            return "(" + noPort + ") Occupe par:" + vaisseau+ " (" + cycle + "/" + cycleDeBase+ ")";
         return "(" + noPort + ") Libre";
     }
 
@@ -40,9 +44,11 @@ public class Port {
     public void avancerVaisseau() {
 
         if (vaisseau != null)
-            if (cycle++ == 5){
+            if (cycle++ == cycleDeBase){
                 vaisseau = null;
                 cycle = 0;
             }
     }
+
+
 }

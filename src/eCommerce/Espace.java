@@ -1,4 +1,8 @@
 package eCommerce;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
 
 public class Espace extends Thread{
 
@@ -12,7 +16,6 @@ public class Espace extends Thread{
 
     @Override
     public void run() {
-
         boolean enAttendantQueLeCielDisparaisseALHorizon = true;
         while(enAttendantQueLeCielDisparaisseALHorizon){
 
@@ -41,6 +44,7 @@ public class Espace extends Thread{
         }
         return vaisseau;
     }
+
 
 
 }

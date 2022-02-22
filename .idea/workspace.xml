@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aecf390-4b5b-4908-804a-6f23b7eba5e7" name="Changes" comment="">
-<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Planete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Planete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/eCommerce/Planete.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/eCommerce/Planete.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/eCommerce/Produit.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/eCommerce/Produit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/eCommerce/Vaisseau.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/eCommerce/Vaisseau.class" afterDir="false" />
->>>>>>> c351b757d02488fe346973153a48e6b1ad1f77b1
+      <change beforePath="$PROJECT_DIR$/src/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controleur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eCommerce/Port.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Port.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

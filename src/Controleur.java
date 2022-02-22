@@ -3,13 +3,20 @@ import eCommerce.*;
 import java.util.Scanner;
 
 public class Controleur {
+    
+    private int cycleDeBase; 
 
     private EspaceCommercial espaceCommercial;
+
+
 
     public static void main(String[] args) {
         Controleur controleur = new Controleur();
         controleur.communiquerAvecItineraire(new Itineraire());
         controleur.debuterLaJournee();
+
+        Port cycleDeBase = new Port();
+        cycleDeBase.recupererCycle(cycleDebut);
     }
 
 
@@ -17,14 +24,30 @@ public class Controleur {
 
         this.espaceCommercial = espaceCommercial;
     }
+    
+    public int recupererCycle(Port cycleDeBase){
+
+
+        int (int)cycleDebut =cycleDeBase.get;
+
+        return cycleDebut;
+    }
 
     public void debuterLaJournee(){
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Combien de cycle voulez-vous jouer ?");
+        int cycle = new Scanner(System.in).nextInt();
+        int cycleDeBase = cycle;
+        if(cycle<1){
+            System.out.println("Ok tu joues pas");
+        }
+
 
         int valeur = 1;
         Scanner lectureClavier = new Scanner(System.in);
 
         try{
-            while(valeur != 0){
+            while(cycle != 0){
                 System.out.println(espaceCommercial.afficherItineraire());
 
                 System.out.println(afficherMenu());
@@ -43,6 +66,7 @@ public class Controleur {
                         int numSerie = lectureClavier.nextInt();
                         espaceCommercial.afficherBilanTransactionVaisseau(numSerie);
                 }
+                cycle--;
             }
         }
         catch(EcrasementVaisseauException eae){
@@ -59,13 +83,11 @@ public class Controleur {
     }
 
     private String afficherMenu(){
-
         StringBuilder sb = new StringBuilder();
 
         sb.append("----------\n");
         sb.append("1) Faire survoler les vaisseaux\n");
         sb.append("2) Faire atterrir un vaisseau\n");
-        sb.append("0) Fin de la journee de travail!\n");
         sb.append("3) Voir l'historique d'un vaisseau\n");
         sb.append("---------\n");
         sb.append("Votre choix?");
