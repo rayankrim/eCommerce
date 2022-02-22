@@ -6,9 +6,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/eCommerce/Controleur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/Controleur.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Itineraire.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Itineraire.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Port.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Port.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Vaisseau.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Vaisseau.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eCommerce/eCommerce/Vaisseau.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controleur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eCommerce/Itineraire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Itineraire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eCommerce/Port.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Port.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eCommerce/Vaisseau.java" afterDir="false" />
     </list>

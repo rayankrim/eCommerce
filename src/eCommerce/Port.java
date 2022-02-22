@@ -7,12 +7,11 @@ public class Port {
 
 
 	
+    private int VaisseauArrive=0;
     private Vaisseau vaisseau;
     private int noPort;
     private int cycle;
     private int fileAttente;
-    private Vaisseau prochainVaisseau;
-
 
 
     public Port(int noPort) {
@@ -62,11 +61,8 @@ public class Port {
 
     public void avancerVaisseau() {
 
-        fileAttente--;
-        vaisseau= prochainVaisseau;
         if (vaisseau != null)
-            if (cycle++ == 5){
-
+            if (cycle++ == 100){
                 vaisseau = null;
                 cycle = 0;
             }

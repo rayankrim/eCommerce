@@ -124,16 +124,18 @@ public abstract class Vaisseau {
 		}
 	}
 
-	public void afficherBilanTransaction() {
+	public String afficherBilanTransaction() {
 		StringBuilder sb = new StringBuilder();
 
 		sb.append("--- bilan des transactions --- \n");
 		for (Map.Entry mapentry : mapTransaction.entrySet()) {
-			sb.append("clé: " + mapentry.getKey()
-					+ " | valeur: " + mapentry.getValue());
+			sb.append("port: " + mapentry.getKey()) ;
+			sb.append(" | produit: " + mapentry.getValue().toString());
 
 		}
+		return sb.toString();
 	}
+
 
 	@Override
 	public String toString() {

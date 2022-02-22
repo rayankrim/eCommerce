@@ -15,22 +15,14 @@ public class Controleur {
         controleur.debuterLaJournee();
 
 
-        //Test Charger vaisseau
-        Vaisseau1 v1 = new Vaisseau1();
-        ProduitRegulier pr = new ProduitRegulier(10);
-        Port p1 = new Port(1);
+        Vaisseau v1 = new Vaisseau1();
+        ProduitRegulier pr = new ProduitRegulier(1);
+        Port p10 = new Port(10);
 
-        v1.charger(pr,p1);
+        v1.charger(pr,p10);
 
-
-        //Test Decharger vaisseau
-        Vaisseau1 v2 = new Vaisseau1();
-        ProduitRegulier pr1 = new ProduitRegulier(10);
-        Port p2 = new Port(2);
-
-        v2.charger(pr1,p2);
-
-
+        v1.afficherBilanTransaction();
+        System.out.println(v1.afficherBilanTransaction());
 
 
     }
