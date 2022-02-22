@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Controleur {
     
-    private int cycleDeBase; 
 
     private EspaceCommercial espaceCommercial;
 
@@ -15,8 +14,7 @@ public class Controleur {
         controleur.communiquerAvecItineraire(new Itineraire());
         controleur.debuterLaJournee();
 
-        Port cycleDeBase = new Port();
-        cycleDeBase.recupererCycle(cycleDebut);
+
     }
 
 
@@ -25,19 +23,16 @@ public class Controleur {
         this.espaceCommercial = espaceCommercial;
     }
     
-    public int recupererCycle(Port cycleDeBase){
 
-
-        int (int)cycleDebut =cycleDeBase.get;
-
-        return cycleDebut;
-    }
 
     public void debuterLaJournee(){
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Combien de cycle voulez-vous jouer ?");
         int cycle = new Scanner(System.in).nextInt();
-        int cycleDeBase = cycle;
+
+        Cycle cycleDeBase = new Cycle();
+        int nbCycle = cycleDeBase.getNbCycle(cycle);
+
         if(cycle<1){
             System.out.println("Ok tu joues pas");
         }

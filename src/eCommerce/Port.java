@@ -4,20 +4,19 @@ package eCommerce;
 import java.util.Vector;
 
 public class Port {
+
+
 	
     private int VaisseauArrive=0;
     private Vaisseau vaisseau;
     private int noPort;
+    private Cycle cycleDeBase;
     private int cycle;
 
 
     public Port(int noPort) {
         vaisseau=null;
         this.noPort = noPort;
-    }
-
-    public int recupererCycle(int cycleDebut){
-        return cycleDeBase=cycleDeBase;
     }
 
 
@@ -44,7 +43,7 @@ public class Port {
     public void avancerVaisseau() {
 
         if (vaisseau != null)
-            if (cycle++ == cycleDeBase){
+            if (cycle++ == cycleDeBase.getNbCycle()){
                 vaisseau = null;
                 cycle = 0;
             }
