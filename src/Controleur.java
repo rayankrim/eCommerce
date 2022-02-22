@@ -9,10 +9,28 @@ public class Controleur {
 
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ChargementException {
         Controleur controleur = new Controleur();
         controleur.communiquerAvecItineraire(new Itineraire());
         controleur.debuterLaJournee();
+
+
+        //Test Charger vaisseau
+        Vaisseau1 v1 = new Vaisseau1();
+        ProduitRegulier pr = new ProduitRegulier(10);
+        Port p1 = new Port(1);
+
+        v1.charger(pr,p1);
+
+
+        //Test Decharger vaisseau
+        Vaisseau1 v2 = new Vaisseau1();
+        ProduitRegulier pr1 = new ProduitRegulier(10);
+        Port p2 = new Port(2);
+
+        v2.charger(pr1,p2);
+
+
 
 
     }
@@ -39,7 +57,7 @@ public class Controleur {
         Scanner lectureClavier = new Scanner(System.in);
 
         try{
-            while(cycle != 0){
+            while(cycle > 0){
                 System.out.println(espaceCommercial.afficherItineraire());
 
                 System.out.println(afficherMenu());
@@ -78,7 +96,7 @@ public class Controleur {
         StringBuilder sb = new StringBuilder();
 
         sb.append("----------\n");
-        sb.append("1) Faire survoler les vaisseaux\n");
+        sb.append("1) Faire survoler un nouveau vaisseau\n");
         sb.append("2) Faire atterrir un vaisseau\n");
         sb.append("3) Voir l'historique d'un vaisseau\n");
         sb.append("---------\n");

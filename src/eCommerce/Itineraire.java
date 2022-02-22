@@ -35,8 +35,7 @@ public class Itineraire implements EspaceCommercial, Arrivee{
     public String afficherItineraire(){
 
         StringBuilder sb = new StringBuilder();
- 
-        sb.append("--- start --- \n");
+        sb.append("--- Debut --- \n");
         sb.append("Vaisseaux en survol\n");
         System.out.println(vaisseauEnSurvol.elements());
         for (Enumeration<Vaisseau> enumVaisseau= vaisseauEnSurvol.elements(); enumVaisseau.hasMoreElements();)
@@ -109,7 +108,7 @@ public class Itineraire implements EspaceCommercial, Arrivee{
 
     private void faireAvancerVaisseauxSurLesPorts(){
         for (Enumeration<Port> enumPort = ports.elements(); enumPort.hasMoreElements();)
-            enumPort.nextElement().atterissage();
+            enumPort.nextElement().avancerVaisseau();
     }
 
     private void faireSurvolerLesVaisseaux() throws EcrasementVaisseauException{

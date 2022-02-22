@@ -9,7 +9,6 @@ import java.util.Map;
 public abstract class Vaisseau {
 
 	private int noSerie;
-	private int fileAttente;
 
 	private Chemin chemin;
 	private boolean cheminFinal;
@@ -70,15 +69,7 @@ public abstract class Vaisseau {
 	public void survol(){
 	}
 
-	public void atterissage() throws EcrasementVaisseauException{
-		if (verifierFile())
-			fileAttente++;
-		else
-			throw new EcrasementVaisseauException(this);
-	}
-	private boolean verifierFile(){
-		return fileAttente < 2;
-	}
+
 
 	public int getNoSerie() {
 		return noSerie;
@@ -146,13 +137,9 @@ public abstract class Vaisseau {
 
 	@Override
 	public String toString() {
-		if(fileAttente == 0){
 
 			return "(NS:" + noSerie+ ")" ;
-		}else {
-			return "(NS:" + noSerie + ", en file d'attente)";
 
-		}
 	}
 
 	
